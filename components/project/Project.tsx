@@ -2,8 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-import cloneApp from '../../static/clone_tweeter.png'
-
 type sizes = 'small' | 'normal' | 'medium' 
 
 type infoProject = {
@@ -19,8 +17,8 @@ interface Props{
     size?: sizes;
     project: {
         id: number;
-        api: infoProject
-        web : infoProject
+        api?: infoProject
+        web?: infoProject
     }
 }
 
@@ -37,8 +35,8 @@ export const Project = ({size,project}: Props) => {
         <div className='w-full h-full bg-slate-400'>
             <Link href={`/projects/detail/${project.id}`}>
                 <Image 
-                    alt={`${project.web.name}`} 
-                    src={project.web.img} 
+                    alt={`${project.web?.name || ''}`} 
+                    src={project.web?.img || ''} 
                     width={500}
                     height={500}
                     className='w-full h-full object-cover'
@@ -46,7 +44,7 @@ export const Project = ({size,project}: Props) => {
             </Link>
         </div>
         <div className='flex justify-between bg-white w-full h-7 pl-3 pr-3'>
-        <span className='text-base text-[#676767] font-semibold'>{project.web.name} </span>
+        <span className='text-base text-[#676767] font-semibold'>{project.web?.name || ''} </span>
 
         <Link href={`/projects/detail/${project.id}`}>
             <span className='material-icons text-base text-[#676767] hover:text-[#414141]'>open_in_new</span>

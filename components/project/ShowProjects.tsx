@@ -13,8 +13,6 @@ interface Props{
 }
 
 export const ShowProjects = ({sizeComponents,length,all}:Props) => {
-
-    // const projects = [1,2,3,4,5];
     
     return (
         <>
