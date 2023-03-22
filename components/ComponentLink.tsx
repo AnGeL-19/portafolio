@@ -12,10 +12,11 @@ interface Props{
     backGroundColor?: string,
     size: sizes,
     rounded?: rounded,
-    className?: string
+    className?: string,
+    target?: boolean
 }
 
-export const ComponentLink = ({href, text,color,backGroundColor,size,icon,rounded,className}:Props) => {
+export const ComponentLink = ({href, target, text,color,backGroundColor,size,icon,rounded,className}:Props) => {
   return (
     <div className={`    
         ${size=='small' && 'w-8 h-8 p-2'}
@@ -27,7 +28,8 @@ export const ComponentLink = ({href, text,color,backGroundColor,size,icon,rounde
         ${className}
     `}>
     <Link className='w-full h-full flex justify-between items-center'
-            href={href}>
+            href={href}
+            target={`${target ? '_blank' : '' }`}>
             {
                 text
                     &&

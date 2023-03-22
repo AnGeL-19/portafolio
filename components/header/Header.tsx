@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 
 const links = [
@@ -28,11 +28,13 @@ export const Header = () => {
 
     const router = usePathname()
     const path = `/${router.split('/')[1]}`
+    console.log(path);
+    
     
   return (
-    <header className='flex justify-center items-center w-full h-20'>
-        <nav className='flex flex-row justify-between w-[865px]'>
-            <span>
+    <header className='flex items-center w-full h-20 lg:px-20 md:px-6 px-2 '>
+        <nav className='flex flex-row justify-between min-w-full'>
+            <span >
                 <Link href='/'
                         className='text-3xl font-bold text-slate-600'>
                     Angel MR
@@ -43,8 +45,8 @@ export const Header = () => {
                   links.map((link,i) => (
                     <li key={i}>
                         <Link href={link.href}
-                                className={`text-xl font-semibold text-slate-600 hover:text-cyan-500
-                                ${path === link.href && 'text-cyan-500'}
+                                className={`text-xl font-semibold hover:text-cyan-500
+                                ${path === link.href ? 'text-cyan-500' : 'text-slate-600'}
                                 `}>
                             {link.text}
                         </Link>

@@ -8,16 +8,20 @@ type rounded = 'rounded-sm' | 'rounded-md' | 'rounded-lg' | 'rounded-xl'
 interface Props{
     text?: string,
     icon?: string,
-    color: string | '#000000',
+    type?: 'button' | 'submit' | 'reset',
+    color?: string | '#000000',
+    bgColor?: string,
     size: sizes,
     rounded?: rounded
-    functionBtn: () => void;
+    functionBtn?: () => void;
 }
 
 
-export const Button = ({text,icon,size,color,rounded,functionBtn}: Props) => {
+export const Button = ({type,text,icon,size,color,rounded,bgColor,functionBtn}: Props) => {
   return (
-    <button onClick={functionBtn} 
+    <button 
+        type={type || 'button'}
+        onClick={functionBtn} 
         className={`    
         ${size=='small' && 'w-8 h-8 p-3'}
         ${size=='normal' && 'w-28 h-8 p-3'}
@@ -25,6 +29,8 @@ export const Button = ({text,icon,size,color,rounded,functionBtn}: Props) => {
         ${icon}
         ${color}
         ${rounded}
+        ${bgColor}
+        flex items-center justify-center
     `}>
         {
             text

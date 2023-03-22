@@ -1,15 +1,14 @@
 import { Project } from "@/components/project/Project";
+import { ShowProjects } from "@/components/project/ShowProjects";
 
 export default function Projects(): JSX.Element {
     return (
-        <div>
-            <h2 className="text-[#414141] font-bold text-5xl">PROJECTS</h2>
+        <div className="flex flex-col">
+            <h2 className="text-[#414141] font-bold text-5xl mb-5">PROJECTS</h2>
 
-            <section className="max-w-[865px] h-full bg-slate-500 flex flex-wrap gap-3">
-
-                <Project size="normal"/>
-                <Project size="normal"/>
-                <Project size="normal"/>
+            <section className="flex flex-wrap gap-5">
+                
+                <ShowProjects all sizeComponents="medium" /> 
 
             </section>
 

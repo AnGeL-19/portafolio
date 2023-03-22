@@ -14,25 +14,27 @@ export default function RootLayout({
     children: React.ReactNode;
   }) {
     return (
-      <html className='h-screen w-screen'>
+      <html>
         <head>
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         </head>
-        <body className='h-screen w-screen'>
+        <body className='font-sans'>
 
-            <div className='flex flex-col items-center justify-between h-full w-full pl-10 pr-10'>
+            <div className='min-h-screen flex flex-col justify-between'>
 
+              <div className='container mx-auto'>
                 <Header />
 
-                    <div className='flex justify-center'>
-                    {/*  */}
-                        <div className='flex flex-col '>
-                            {children}
-                        </div>
+                  <div className='flex flex-col mt-10 lg:px-20 md:px-6 px-2'>
+                      
+                    {children}
+                      
+                  </div>
 
-                    </div>
+              </div>
+                
 
-                <Footer />
+              <Footer />
 
             </div>
         </body>
