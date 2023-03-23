@@ -7,7 +7,7 @@ export const projects = [
             name: 'Clone Tweeter',
             description: 'It is the tweeter clone that was made to reinforce knowledge.',
             img: 'https://res.cloudinary.com/dl9e7nlbu/image/upload/v1679437469/clone_tweeter_ct2d6l.png',
-            appVisit: '',
+            appVisit: 'https://app-tweeter-front.vercel.app/auth/login',
             appSource: 'https://github.com/AnGeL-19/app-tweeter-front',
             tools: ['HTML','SASS','JAVASCRIPT','REACT','REDUX']
         },
