@@ -7,19 +7,23 @@ import { usePathname } from 'next/navigation'
 const links = [
     {
         href: '/',
-        text: 'Home'
+        text: 'Home',
+        icon: 'home'
     },
     {
         href: '/projects',
-        text: 'Projects'
+        text: 'Projects',
+        icon: 'bookmarks'
     },
     {
         href: '/about',
-        text: 'About'
+        text: 'About',
+        icon: 'note'
     },
     {
         href: '/contact',
-        text: 'Contact'
+        text: 'Contact',
+        icon: 'import_contacts'
     },
 ]
 
@@ -33,22 +37,36 @@ export const Header = () => {
     
   return (
     <header className='flex items-center w-full h-20 lg:px-20 md:px-6 px-2 '>
-        <nav className='flex flex-row justify-between min-w-full'>
+        <nav className='flex flex-row flex-wrap justify-between min-w-full sm:items-center'>
             <span >
                 <Link href='/'
-                        className='text-3xl font-bold text-slate-600'>
-                    Angel MR
+                        >
+                    
+                    <span className='font-bold text-slate-600 text-3xl sm:flex hidden'>
+                        Angel MR
+                    </span>
+                    <span className='font-bold text-slate-600 text-3xl sm:hidden flex'>
+                        AMR
+                    </span>
                 </Link>
             </span>
             <ul className='flex flex-row gap-6'>
                 {
                   links.map((link,i) => (
                     <li key={i}>
-                        <Link href={link.href}
-                                className={`text-xl font-semibold hover:text-cyan-500
+                        <Link href={link.href}>
+                            <span className={`font-semibold hover:text-cyan-500 text-xl
                                 ${path === link.href ? 'text-cyan-500' : 'text-slate-600'}
-                                `}>
+                                sm:flex hidden `}>
                             {link.text}
+                            </span>
+                            <span className={` material-icons font-semibold hover:text-cyan-500 text-2xl
+                                ${path === link.href ? 'text-cyan-500' : 'text-slate-600'}
+                                sm:hidden flex`}>
+
+                                {link.icon}
+
+                            </span>
                         </Link>
                     </li>
                   ))  

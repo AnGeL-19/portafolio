@@ -47,7 +47,7 @@ export const Project = ({size,project}: Props) => {
         <span className='text-base text-[#676767] font-semibold'>{project.web?.name || ''} </span>
 
         <Link href={`/projects/detail/${project.id}`}>
-            <span className='material-icons text-base text-[#676767] hover:text-[#414141]'>open_in_new</span>
+            <span className='material-icons text-sm text-[#676767] hover:text-[#414141]'>open_in_new</span>
         </Link>
         
         </div>
