@@ -32,46 +32,40 @@ export const Header = () => {
 
     const router = usePathname()
     const path = `/${router.split('/')[1]}`
-    console.log(path);
-    
-    
+  
   return (
     <header className='flex items-center w-full h-20 lg:px-20 md:px-6 px-2 '>
-        <nav className='flex flex-row flex-wrap justify-between min-w-full sm:items-center'>
+        
+        <nav className='flex flex-row flex-wrap justify-between min-w-full '>
+  
             <span >
                 <Link href='/'
                         >
                     
-                    <span className='font-bold text-slate-600 text-3xl sm:flex hidden'>
+                    <span className=' font-bold text-slate-600 text-3xl  '>
                         Angel MR
                     </span>
-                    <span className='font-bold text-slate-600 text-3xl sm:hidden flex'>
-                        AMR
-                    </span>
+                   
                 </Link>
             </span>
-            <ul className='flex flex-row gap-6'>
+            
+            
+            <ul className='flex flex-row gap-6 lg:flex-row'>
                 {
                   links.map((link,i) => (
                     <li key={i}>
                         <Link href={link.href}>
                             <span className={`font-semibold hover:text-cyan-500 text-xl
                                 ${path === link.href ? 'text-cyan-500' : 'text-slate-600'}
-                                sm:flex hidden `}>
+                                `}>
                             {link.text}
-                            </span>
-                            <span className={` material-icons font-semibold hover:text-cyan-500 text-2xl
-                                ${path === link.href ? 'text-cyan-500' : 'text-slate-600'}
-                                sm:hidden flex`}>
-
-                                {link.icon}
-
                             </span>
                         </Link>
                     </li>
                   ))  
                 }
             </ul>
+
         </nav>
     </header>
   )
