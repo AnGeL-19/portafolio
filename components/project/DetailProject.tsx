@@ -21,7 +21,7 @@ export const DetailProject = ({title,img,description,tools,visitApp,visitSource}
 
         <div className="flex flex-row flex-wrap justify-between">
 
-            <div className=" rounded-3xl overflow-hidden shadow-xl lg:w-[410px] lg:h-[300px] lg:mr-10 s:w-full s:h-auto s:mr-0">
+            <div className=" rounded-3xl overflow-hidden shadow-xl w-[410px] h-[300px] mr-10 md:w-full md:h-auto sm:mr-0">
 
                 <Image 
                     alt={`${title}`} 

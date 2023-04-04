@@ -14,10 +14,11 @@ interface Props{
     size: sizes,
     rounded?: rounded
     functionBtn?: () => void;
+    className?: string;
 }
 
 
-export const Button = ({type,text,icon,size,color,rounded,bgColor,functionBtn}: Props) => {
+export const Button = ({type,text,icon,size,color,rounded,bgColor,functionBtn,className}: Props) => {
   return (
     <button 
         type={type || 'button'}
@@ -31,6 +32,7 @@ export const Button = ({type,text,icon,size,color,rounded,bgColor,functionBtn}: 
         ${rounded}
         ${bgColor}
         flex items-center justify-center
+        ${className}
     `}>
         {
             text

@@ -16,7 +16,7 @@ export default function Contact(): JSX.Element {
                     <div className="flex flex-col mb-5 mr-10">
                         <h3 className="text-3xl font-semibold text-[#414141] ">CONTACT INFO:</h3>
 
-                        <div className="flex flex-row items-cente mt-5">
+                        <div className="flex flex-row justify-center items-cente mt-5">
                             <span className="material-icons font-bold text-2xl text-[#414141] mr-3">
                                 email 
                             </span>

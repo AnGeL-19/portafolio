@@ -25,7 +25,7 @@ export default function RootLayout({
               <div className='container mx-auto'>
                 <Header />
 
-                  <div className='flex flex-col mt-10 lg:px-20 md:px-6 px-2'>
+                  <div className='flex flex-col mt-10 px-24 md:px-6 sm:px-2'>
                       
                     {children}
                       

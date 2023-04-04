@@ -43,7 +43,7 @@ export const ComponentLink = ({href, target, text,color,backGroundColor,size,ico
             {
                 icon
                     &&
-                <span className="material-icons font-bold text-base">
+                <span className="material-icons font-semibold text-base">
                     {icon}
                 </span>
             }
