@@ -60,5 +60,16 @@ export const projects = [
             appSource: 'https://github.com/AnGeL-19/pokemon-app',
             tools: ['HTML','CSS','TYPESCRIPT','NEXTJS']
         }
+    },
+    {
+        id: 5,
+        web: {
+            name: 'Eagle Wear Shop',
+            description: 'It is a test of a store where you add products to the shopping cart. You can also log in and register.',
+            img: 'https://res.cloudinary.com/dl9e7nlbu/image/upload/v1682040238/shore_vbqf6z.png',
+            appVisit: 'https://e-wshop-kwe3.vercel.app/',
+            appSource: 'https://github.com/AnGeL-19/EWshop',
+            tools: ['HTML','TAILDWIND','TYPESCRIPT','REACTJS']
+        }
     }
 ]
